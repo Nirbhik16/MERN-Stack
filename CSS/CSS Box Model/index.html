@@ -5,8 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            background-color: aqua;
+        }
+        .box1{
+            color:yellow;
+            padding:10px;
+            margin:25px;
+            border: 2px solid red;
+            height:200px;
+            box-sizing: border-box; 
+            /* box-sizing : border-box means content+padding+border=height */
+        }
+        .box2{
+            color:red;
+            margin:25px;
+            border: 2px solid red;
+            /* Margin Collapse between two container where the container having more margin will be considered between two containers */
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="box box1">I am a box</div>
+    <div class="box box2">I am another box</div>
 </body>
 </html>
