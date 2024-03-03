@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* The Specificity of this selector is 1 */
+    /* Importance Application */
+    h1{
+        color:aqua;
+        /* color:aqua !important; */
+    }
+    /* The Specificity of this selector is 10 */
+    /* Specificity calculation of this is 1 + 10 */
+    h1.cyellow{
+        color:yellow;
+    }
+    /* The Specificity of this selector is 10 */
+    .cred{
+        color:red;
+    }
+    /* The Specificity of this selector is 10 */
+    .cpurple{
+        color:purple;
+    }
+    /* This is an example of attribute selector The Specificity of this selector is 10*/
+    /* [data-x=a]{
+        color:aqua;
+    } */
+
+    /* Specificity of this selector is 1 + 10 + 10 + 10 + 10 = 41 */
+    a.harryclass.rohan-class[href]:hover{
+        color:blueviolet;
+    }
+</style>
+<body>
+    <!-- Cascade Algorithm -->
+    <!-- Rule 1: Order and position of appearance 
+    Rule 2: Specificity = Inline_Style > Id_Selector > Class_or_Attribute_Selector > Element_Selector > Universal_Selector (Specificity Calculation)
+    Rule 3: Origin
+    Rule 4: Importance -->
+    <h1 class="cyellow cred cpurple" data-x="a">CSS Specificity</h1>
+</body>
+</html>
