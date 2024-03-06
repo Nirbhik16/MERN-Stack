@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width:80vw;
+            height:50vh;
+            border:2px solid black;
+            display:grid;
+            /* Customised Columns */
+            /* Grid Template Rows and Columns example given in video */
+
+            /* Grid track and Grid area */
+            /* Naming the columns */
+            /* grid-template-columns:[phela] 120px [doosra] 100px [t];
+            grid-template-rows: 100px 100px 100px; */
+            /* grid-template-columns: 1fr 2fr 1fr; */
+            /* grid-template-columns: repeat(5,1fr); */
+
+            /* Minimum width of column */
+            /* grid-template-columns: repeat(5,minmax(100px,1fr)); */
+            grid-template-columns: repeat(4,80px);
+            grid-template-rows: repeat(2,80px);
+            row-gap: 10px;
+            column-gap: 44px;
+
+            /* These are used to apply in items */
+            justify-items: center;
+            align-items: center;
+
+            /* When the content is less than size of container */
+            /* These properties are used for content, not items */
+            /* justify-content: center; */
+            /* align-content: end; */
+            place-content: center;
+        }
+        .items{
+            border:2px solid red;
+            height:55px;
+            width:55px;
+        }
+
+        /* Overlapping squares */
+        .item4{
+            grid-row: 1/2;
+            grid-column: phela/t;
+        }
+        .item1{
+            /* grid-row: 1/2; */
+            /* OR  WE CAN DO*/
+            grid-row-start: 1;
+            grid-row-end: 2;
+            grid-column: 1/2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="items">1</div>
+        <div class="items">2</div>
+        <div class="items">3</div>
+        <div class="items">4</div>
+        <div class="items">5</div>
+    </div>
+</body>
+</html>
