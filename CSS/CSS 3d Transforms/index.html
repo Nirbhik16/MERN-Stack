@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 3D Transforms</title>
+    <style>
+        .box{
+            height:50px;
+            width:50px;
+            background-color: beige;
+            border:2px solid black;
+            /* transform: rotate(40deg); */
+            /* transform: rotate(0.5turn); */
+            /* transform: rotateX(50deg); */
+            /* transform: rotateY(50deg); */
+            /* transform: rotateZ(50deg); */
+            /* transform: scale(1.6); */
+
+            /* Skew does'nt apply on Z-axis */
+            /* transform: skew(5deg); */
+            /* transform: skewY(5deg); */
+            /* transform: translateX(34px); */
+            transform: translateX(34%) skew(40deg) translateY(100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            width: 100vw;
+            height:80vh;
+            border:2px solid purple;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">box</div>
+    </div>
+</body>
+</html>
