@@ -1,5 +1,5 @@
 console.log("Hello world")
 
-document.body.firstElementChild 
-document.body.firstElementChild.childNodes 
-document.body.firstElementChild.children
+console.log(document.body.firstElementChild); 
+console.log(document.body.firstElementChild.childNodes);
+console.log(document.body.firstElementChild.children);
